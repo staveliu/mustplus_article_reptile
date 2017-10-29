@@ -4,11 +4,11 @@ import pymysql.cursors
 i="1"
 title=[]
 url=[]
-connection = pymysql.connect(host='',
+connection = pymysql.connect(host='sqlstudy.stave.tech',
                              port=3306,
-                             user='',
-                             password='',
-                             db='',
+                             user='root',
+                             password='153007lwj',
+                             db='lwj',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 while True:
@@ -26,6 +26,7 @@ while True:
             i = str((int(i)+1))
         else:
             break
+        break
     except:
         print("Timed Out, Retry")
 print("ok")
@@ -47,6 +48,7 @@ for url_current in url:
     if content_new=="":
         content_new = "null"
     content_time=article_time[0].replace("T"," ")
+    content_time=content_time.replace("+00:00","")
     print(content_new)
     print(content_time)
     try:
