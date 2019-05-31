@@ -8,7 +8,7 @@ url=[]
 connection = pymysql.connect(host='sqlstudy.stave.tech',
                              port=3306,
                              user='root',
-                             password='153007lwj',
+                             password='',
                              db='lwj',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
